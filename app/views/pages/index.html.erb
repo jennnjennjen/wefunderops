@@ -9,7 +9,7 @@
     <div>
       <h1>Jenn's First Rails Project</h1>
     </div>
-    <p>Hi, my name is Jennifer. I work at a startup called Wefunder. This is my first Rails Project.</p>
+    <p>Hello, <%= @name %> my name is Jennifer. I work at a startup called Wefunder. This is my first Rails Project.</p>
   </div>
   <h2>Financial Statements Date Calculator</h2>
     <p>This is my financial statements dates calculator. We can use this to figure out what dates a company needs financial statements for and when they will need new financial statements. </p>
@@ -17,7 +17,7 @@
 
 
 
-<%= form_for :tool do |f| %>
+<%= form_for :calctool do |f| %>
   <p>
     <%= f.label(:fiscalyear, "Fiscal Year End") %><br>
     <%= f.text_field :fiscalyear, :value => 'MM/DD', :onfocus => "if (this.value=='MM/DD') this.value='';", :onblur => "if (this.value=='') this.value='MM/DD';" %>
@@ -29,19 +29,10 @@
   </p>
  
   <p>
-    <%= f.submit %>
+    <%= f.submit :value => "Submit Information" %>
   </p>
 <% end %>
 
-
-<%= form_tag do %>
-
-<%= check_box_tag(:pet_dog) %>
-<%= label_tag(:pet_dog, "I own a dog") %>
-<%= check_box_tag(:pet_cat) %>
-<%= label_tag(:pet_cat, "I own a cat") %><% end %>
-
-Hello, <%= @name %>.
 
 </body>
 </html>
