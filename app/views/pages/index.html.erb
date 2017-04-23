@@ -4,6 +4,21 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <title>Jenn's First Rails Project</title>
+
+<style>
+.scaleapi_test, .scaleapi_live {
+    background-color: #d4d4d4;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.scaleapinotify { display: none;
+}
+ 
+</style>
+
 </head>
 
 <body>
@@ -51,7 +66,7 @@ $(‘.form_submit’).on(‘click’, ‘button’, function () {
 </script>
 
 <h2>ScaleAPI Testing</h2>
-  <p>This section is just to appease Nick. I am using this to run tests of the ScaleAPI.</p>
+  <p>This section is just to appease Nick. I am using this to run tests of ScaleAPI.</p>
   <p>
 
 <div class="scaleapi_test">
@@ -61,6 +76,20 @@ $(‘.form_submit’).on(‘click’, ‘button’, function () {
 <div class="scaleapi_live">
   Click here to create a live request. 
 </div>
+
+<div class="scaleapinotify">Done!</div>
+
+<script>
+
+$('.scaleapi_test').on('click', function () {
+  $.ajax('/scale_api/scaleapi_test.rb', {
+    success: function(response) {
+     $('.scaleapinotify').toggle();
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
