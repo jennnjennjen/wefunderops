@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root :to => "pages#index"
   
   resources :tools
+  resources :scale_api
 
 end

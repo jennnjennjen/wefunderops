@@ -1,0 +1,2 @@
+module ScaleApiHelper
+end
