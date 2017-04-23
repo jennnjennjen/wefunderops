@@ -1,2 +1,0 @@
-# wefunderops
-Wefunder Ops
