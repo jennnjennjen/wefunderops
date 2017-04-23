@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # README
 
 This README would normally document whatever steps are necessary to get the
@@ -23,7 +22,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-=======
-# wefunderops
-Wefunder Ops
->>>>>>> d9490ff0bf0128b7248f42a51d7112917b7ad1a7
