@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
   <title>Jenn's First Rails Project</title>
 </head>
 
@@ -29,10 +31,24 @@
   </p>
  
   <p>
-    <%= submit_tag (value = "Submit Information") %>
+    <%= submit_tag "Submit Information", class: "form_submit" %>
   </p>
 <% end %>
 
+<div class="calculation">
+</div>
+
+<script>
+
+$(‘.form_submit’).on(‘click’, ‘button’, function () {
+  $.ajax(‘/pages/confirmation.html.erb’, {
+    success: function(response) {
+     $(‘.calculation’).html(response).toggle();
+    }
+  });
+});
+
+</script>
 
 </body>
 </html>
