@@ -17,19 +17,19 @@
 
 
 
-<%= form_for :calctool do |f| %>
+<%= form_tag @calctool do %>
   <p>
-    <%= f.label(:fiscalyear, "Fiscal Year End") %><br>
-    <%= f.text_field :fiscalyear, :value => 'MM/DD', :onfocus => "if (this.value=='MM/DD') this.value='';", :onblur => "if (this.value=='') this.value='MM/DD';" %>
+    <%= label(:fiscalyear, "Fiscal Year End") %><br>
+    <%= text_field_tag :fiscalyear,'MM/DD', onfocus: "if (this.value=='MM/DD') this.value='';", onblur: "if (this.value=='') this.value='MM/DD';" %>
   </p>
  
   <p>
-    <%= f.label(:text, "Company Name") %><br>
-    <%= f.text_field :text %>
+    <%= label(:text, "Company Name") %><br>
+    <%= text_field_tag :text %>
   </p>
  
   <p>
-    <%= f.submit :value => "Submit Information" %>
+    <%= submit_tag (value = "Submit Information") %>
   </p>
 <% end %>
 
